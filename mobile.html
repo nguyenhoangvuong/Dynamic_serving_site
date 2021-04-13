@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic serving site</title>
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="shortcut icon" href="images/android_os_30px.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/JQuery.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="social-call">
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook-f"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div class="phone">
+                <span>Call +847689482</span>
+            </div>
+        </div>
+
+        <!-- Menu bar -->
+        <div class="navigation d-flex">
+            <a href="#" class="logo">
+                <img src="images/portaventura_world_30px.png" alt="">
+            </a>
+            <div class="toggle"></div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cat</a>
+                    <span class="cute-lable">Cute</span>
+                </li>
+                <li><a href="#">Cat Mun</a></li>
+                <li><a href="#">Cat Tiny</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+            <div class="right-menu">
+                </a>
+                <a href="#" class="user" style="margin-left: 85px;">
+                    <i class="fa fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="allcat">
+        <p>CAT & GIRL MOBILE</p>
+        <p><button>Get more kittens!</button></p>
+      
+        <ul class="cat">
+        </ul>
+      
+        <template>
+          <li class="catli">
+            <img alt="">
+          </li>
+        </template>
+        <script src="client.js"></script>  
+    </div>
+
+    <section class="services">
+        <div class="services-box">
+            <i class="fa fa-truck"></i>
+            <span>Free Shipping</span>
+            <p>Free Shiping For All Us Orders </p>
+        </div>
+
+        <div class="services-box">
+            <i class="fa fa-phone"></i>
+            <span>Support 24/7</span>
+            <p>We support 24h a day</p>
+        </div>
+
+        <div class="services-box">
+            <i class="fa fa-refresh"></i>
+            <span>100% Money Back</span>
+            <p>You have 30 day to Return</p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- address -->
+        <span class="copyright">
+            Địa chỉ : 41/58A , Cầu Xây , Quận 9
+        </span>
+        <!-- subcribe -->
+        <div class="subcribe">
+            <form>
+                <input type="email" placeholder="Example@gmail.com" name="" id="" required>
+                <input type="submit" name="" id="" value="subcribe">
+            </form>
+        </div>
+    </footer>
+
+    <!-- script -->
+    <script type="text/javascript">
+        // for search bar
+        $(document).on('click', '.search', function () {
+            $('.search-bar').addClass('search-bar-active')
+        })
+        $(document).on('click', '.search-cancel', function () {
+            $('.search-bar').removeClass('search-bar-active')
+        })
+
+        // login and sign up form
+        $(document).on('click', '.user,.already-account', function () {
+            $('.form').addClass('login-active').removeClass('sign-up-active')
+        })
+        $(document).on('click', '.form-cancel', function () {
+            $('.form').removeClass('login-active')
+        })
+        //create account 
+        $(document).on('click', '.sign-up-btn', function () {
+            $('.form').addClass('sign-up-active').removeClass('login-active')
+        })
+        $(document).on('click', '.form-cancel', function () {
+            $('.form').removeClass('sign-up-active')
+        })
+
+        //Full slider script
+        $(document).ready(function () {
+            $('#adaptive').lightSlider({
+                adaptiveHeight: true,
+                auto: true,
+                item: 1,
+                slideMargin: 0,
+                loop: true
+            });
+        });
+
+        // Featured slider
+        $(document).ready(function () {
+            $('#autoWidth').lightSlider({
+                autoWidth: true,
+                loop: true,
+                onSliderLoad: function () {
+                    $('#autoWidth').removeClass('cS-hidden');
+                }
+            });
+        });
+
+
+
+        // For fix menu when scroll
+        $(window).scroll(function(){
+            if($(document).scrollTop() > 50){
+                $('.navigation').addClass("fix-nav");
+            }
+            else{
+                $('.navigation').removeClass('fix-nav');
+            }
+        })
+
+        // for responsive
+        $(document).ready(function(){
+            $('.toggle').click(function(){
+                $('.toggle').toggleClass('active')
+                $('.navigation').toggleClass('active')
+            })
+        })
+        
+    </script>
+
+</body>
+
+</html>
