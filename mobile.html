@@ -9,7 +9,12 @@
     <link rel="stylesheet" type="text/css" href="css/style2.css">
     <link rel="shortcut icon" href="images/android_os_30px.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jquery -->
     <script src="js/JQuery.js"></script>
+    <!-- light slider css -->
+    <link type="text/css" rel="stylesheet" href="css/lightslider.css" />
+    <!-- light slider js -->
+    <script src="js/lightslider.js"></script>
 </head>
 
 <body>
@@ -35,35 +40,161 @@
             <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Cat</a>
-                    <span class="cute-lable">Cute</span>
                 </li>
                 <li><a href="#">Cat Mun</a></li>
                 <li><a href="#">Cat Tiny</a></li>
                 <li><a href="#">Shop</a></li>
             </ul>
             <div class="right-menu">
+                <a href="javascript:void(0);" class="search">
+                    <i class="fa fa-search"></i>
                 </a>
-                <a href="#" class="user" style="margin-left: 85px;">
+                <a href="javascript:void(0);" class="user">
                     <i class="fa fa-user"></i>
                 </a>
             </div>
         </div>
     </nav>
+    <!-- Search bar -->
+    <div class="search-bar">
+        <!-- search input -->
+        <div class="search-input">
+            <input type="text" placeholder="Search....." />
+            <!-- cancel btn -->
+            <a href="javascript:void(0);" class="search-cancel">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
 
+    <!-- login and sign up form -->
+    <div class="form">
+        <!-- login -->
+        <div class="login-form">
+            <!-- Cancel btn -->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fa fa-times"></i>
+            </a>
+            <!-- heading -->
+            <strong>Log In</strong>
+            <form>
+                <input type="email" placeholder="Example@gmail.com" name="email">
+                <input type="password" placeholder="Password" name="password">
+                <!-- submit btn-->
+                <input type="submit" value="Log In">
+            </form>
+            <!-- forget and sign up btn -->
+            <div class="form-btns">
+                <a href="#" class="forget">Forget Your Password</a>
+                <a href="javascript:void(0);" class="sign-up-btn">Create Account</a>
+            </div>
+        </div>
+
+        <!-- Sign up -->
+        <div class="sign-up-form">
+            <!-- Cancel btn -->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fa fa-times"></i>
+            </a>
+            <!-- heading -->
+            <strong>Sign Up</strong>
+            <form>
+                <input type="text" placeholder="Full Name" name="fullname" required>
+                <input type="email" placeholder="Example@gmail.com" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <!-- submit btn-->
+                <input type="submit" value="Sign Up">
+            </form>
+            <!-- forget and sign up btn -->
+            <div class="form-btns">
+                <a href="javascript:void(0);" class="already-account">Already Have Account?</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full slider -->
+
+    <ul id="adaptive" class="cs-hidden">
+        <!-- box 1 -->
+        <li class="item-a">
+            <div class="full-slider-box f-slider-1">
+                <!-- slider text container -->
+                <div class="slider-text-container">
+                    <div class="f-slider-text">
+                        <span>Unlimited viewing</span>
+                        <strong>more than 50 pictures</br>with <font>Cat & Girl</font></strong>
+                        <a href="#" class="f-slider-btn">View now</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!-- box 2 -->
+        <li class="item-a">
+            <div class="full-slider-box f-slider-4">
+                <!-- slider text container -->
+                <div class="slider-text-container">
+                    <div class="f-slider-text">
+                        <span>Unlimited viewing</span>
+                        <strong>more than 50 pictures</br>with <font>Cat & Girl</font></strong>
+                        <a href="#" class="f-slider-btn">View now</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!-- box 3 -->
+        <li class="item-a">
+            <div class="full-slider-box f-slider-2">
+                <!-- slider text container -->
+                <div class="slider-text-container">
+                    <div class="f-slider-text">
+                        <span>Unlimited viewing</span>
+                        <strong>more than 50 pictures</br>with <font>Cat & Girl</font></strong>
+                        <a href="#" class="f-slider-btn">View now</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!-- box 4 -->
+        <li class="item-a">
+            <div class="full-slider-box f-slider-5">
+                <!-- slider text container -->
+                <div class="slider-text-container">
+                    <div class="f-slider-text">
+                        <span>Unlimited viewing</span>
+                        <strong>more than 50 pictures</br>with <font>Cat & Girl</font></strong>
+                        <a href="#" class="f-slider-btn">View now</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!-- box 5 -->
+        <li class="item-a">
+            <div class="full-slider-box f-slider-3">
+                <!-- slider text container -->
+                <div class="slider-text-container">
+                    <div class="f-slider-text">
+                        <span>Unlimited viewing</span>
+                        <strong>more than 50 pictures</br>with <font>Cat & Girl</font></strong>
+                        <a href="#" class="f-slider-btn">View now</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
 
     <div class="allcat">
         <p>CAT & GIRL MOBILE</p>
         <p><button>Get more kittens!</button></p>
-      
+
         <ul class="cat">
         </ul>
-      
+
         <template>
-          <li class="catli">
-            <img alt="">
-          </li>
+            <li class="catli">
+                <img alt="">
+            </li>
         </template>
-        <script src="client.js"></script>  
+        <script src="client.js"></script>
     </div>
 
     <section class="services">
@@ -152,23 +283,23 @@
 
 
         // For fix menu when scroll
-        $(window).scroll(function(){
-            if($(document).scrollTop() > 50){
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
                 $('.navigation').addClass("fix-nav");
             }
-            else{
+            else {
                 $('.navigation').removeClass('fix-nav');
             }
         })
 
         // for responsive
-        $(document).ready(function(){
-            $('.toggle').click(function(){
+        $(document).ready(function () {
+            $('.toggle').click(function () {
                 $('.toggle').toggleClass('active')
                 $('.navigation').toggleClass('active')
             })
         })
-        
+
     </script>
 
 </body>

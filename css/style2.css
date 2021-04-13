@@ -117,6 +117,315 @@ nav{
     top: 100%;
 }
 
+.search-bar{
+    width: 100%;
+    height: 300px;
+    background-color: #ffffff;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px -5px 30px rgba(0, 0, 0, 0.1);
+    z-index: 101;
+    animation:search 0.3s;
+}
+.search-input{
+    width: 90%;
+    border-bottom: 2px solid #555555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 20px;
+}
+.search-bar input{
+    width: 100%;
+    padding: 30px;
+    border: none;
+    outline: none;
+    padding: 0px 20px;
+    margin: 20px;
+    font-size: 2rem;
+}
+.search-cancel{
+    padding-right: 20px;
+    font-size: 2rem;
+    color: #272727;
+}
+.search-bar{
+    display: none;
+}
+.search-bar-active{
+    display: flex;
+}
+@keyframes search{
+    0%{
+        bottom: -300px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+.form{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 102;
+}
+.login-form,
+.sign-up-form{
+    width: 420px;
+    padding: 20px 10px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    position: relative;
+}
+.login-form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sign-up-form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-form strong,
+.sign-up-form strong{
+    color: #dbdbdb;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 2px 7px 7px 7px;
+    letter-spacing: 0.5;
+}
+.login-form input,
+.sign-up-form input{
+    width: 90%;
+    height: 45px;
+    margin: 6px 0px;
+    padding: 0px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    border-radius: 7px;
+}
+.login-form input::placeholder,
+.sign-up-form input::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+.login-form input[type="submit"],
+.sign-up-form input[type="submit"]{
+    background-color: #0b9d8a;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1.1);
+}
+.form-btns{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+}
+.form-btns a{
+    color: #4b4b4b;
+    font-size: 0.9rem;
+}
+.form-btns .sign-up-btn{
+    border-bottom: 1px solid #868686;
+    line-height: 16px;
+}
+.form-cancel{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #868686;
+}
+.login-form,
+.sign-up-form,
+.form{
+    display: none;
+}
+.login-active,
+.login-active .login-form{
+    display: flex;
+    animation: fade 0.3s;
+}
+.sign-up-active,
+.sign-up-active .sign-up-form{
+    display: flex;
+    animation: fade 0.3s;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* slider and banner*/ 
+.full-slider-box,
+.banner-box{
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.f-slider-1{
+    background-image: url(../images/slide3.jpg);
+}
+.f-slider-3{
+    background-image: url(../images/slide4.jpg);
+}
+.f-slider-2{
+    background-image: url(../images/slide2.jpg);
+}
+.f-slider-5{
+    background-image: url(../images/slide6.jpg);
+}
+.f-slider-4{
+    background-image: url(../images/slide5.jpg);
+}
+
+.slider-text-container,
+.banner-text-container{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+.f-slider-text,
+.banner-text{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+.f-slider-text strong,
+.banner-text strong{
+    color: #dbdbdb;
+    line-height: 55px;
+    font-size: 3rem;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+.f-slider-text span,
+.banner-text span{
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #666666;
+    font-size: 1.2rem;
+}
+.f-slider-btn,
+.banner-btn{
+    background-color: #0b9d8a;
+    text-transform: uppercase;
+    display: flex;
+    color: #ffffff;
+    width: 170px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    margin-top: 14px;
+}
+.f-slider-text strong font,
+.banner-text strong font{
+    color: #0b9d8a;
+}
+
+/*  */
+.feature-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feature-heading h2,
+.arrival-heading strong{
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 5px 30px;
+    border: 1px solid #e0e0e0;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #1b1919;
+    letter-spacing: 1px;
+}
+.feature-box{
+    width: 155px;
+    height: 155px;
+    margin: 0px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.feature-box a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.item span{
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 5px;
+    color: #444444;
+}
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#autoWidth{
+    display: flex;
+    justify-content: center !important;
+    margin: 10px auto 40px auto;
+}
+.arrival-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.arrival-heading strong{
+    color: #ffffff;
+    background-color: #222222;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.arrival-heading p{
+    color: #808080;
+    font-size: 0.9rem;
+    margin: 10px;
+}
+
 .cat {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -253,7 +562,7 @@ footer{
     display: block;
 }
 .toggle:before{
-    margin-left: 80px;
+    margin-left: 50px;
     content: '\f0c9';
     font-family: fontAwesome;
     line-height: 30px;
